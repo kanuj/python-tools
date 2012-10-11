@@ -1,10 +1,10 @@
 import subprocess
 import os
 
-subprocess.check_output("git fetch")
+subprocess.check_output("git fetch", shell=True)
 
 try:
-	total_branches = subprocess.check_output("git remote show origin | grep 'local out of date'")
+	total_branches = subprocess.check_output("git remote show origin | grep 'local out of date'", shell=True)
 except subprocess.CalledProcessError:
 	os.system('notify-send -u low "No new branches"')
 	exit(1)
