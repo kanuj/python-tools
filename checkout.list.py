@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 	@author: Kanuj Bhatnagar
 	@description: Search git branches by wildcard and then checkout to them by index.
