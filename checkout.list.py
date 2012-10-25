@@ -27,14 +27,17 @@ try:
 	branch_list = filter(None, branch_list)
 	
 	if index != '':
-		switch_branch = branch_list[int(index)-1].replace('*','');
-		subprocess.check_output("git checkout "+switch_branch, shell=True)
-		exit(1)
-
+		try:
+			switch_branch = branch_list[int(index)-1].replace('*','')
+			subprocess.check_output("git checkout "+switch_branch, shell=True)
+			exit(1)
+		except IndexError:		
+			print 'Specified index not found.'
+			exit(1)	
 
 	print str(len(branch_list))+' branches found: \n'
 
-	i = 1;
+	i = 1
 
 	for branch in branch_list:
 
