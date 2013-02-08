@@ -4,7 +4,7 @@ These scripts are created for optimizing the mundane tasks that you and I do eac
 
 ## branches.py
 
-Need to update your out-of-date branches every morning when you start work? Use this handy little python script instead.
+Need to update your out-of-date branches every morning when you start work? Use this handy little python script instead. The script utilizes linux's notification to display the number of updated branches.
 
 Protip: The script contains the path to the python env so just copy it to your /usr/local/bin for best results.
 
